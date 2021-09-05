@@ -1,4 +1,4 @@
-name: benford
+name: python2
 
 channels:
     - defaults
