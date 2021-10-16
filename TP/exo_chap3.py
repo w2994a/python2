@@ -1,15 +1,13 @@
-# Exercice chapitre 3
+import os
+import subprocess
 
-# Ex 3.6.1
-print("A" * 20)
 
-# Ex 3.6.2
-print("A" * 20 + "G" * 40)
-
-# Ex 3.6.3
-a = "salut"
-b = 102
-c = 10.318
-print(f"a = {a} ; b = {b} ; c = {c:.2f}")
-
-# Ex 3.6.4
+file_name = "spirale.dat"
+wc_cmd = subprocess.check_output(['wc', file_name])
+wc_cmd = wc_cmd.decode()
+wc_cmd = wc_cmd.split()
+nb_lignes = int(wc_cmd[0])
+nb_mots = int(wc_cmd[1])
+nb_caractères = int(wc_cmd[2])
+print(f"{file_name} contient {nb_lignes} lignes, {nb_mots} mots, "
+      f"{nb_caractères} caractères") 
