@@ -10,3 +10,6 @@ __pycache__
 *.pdb
 *.out
 *.fna
+*.tsv
+*.csv
+projet_tuto/
